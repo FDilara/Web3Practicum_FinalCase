@@ -103,4 +103,9 @@ contract InheritanceSharing {
     function died(address _testatorAddress) external view returns(bool) {
         return testators[_testatorAddress].isDied;
     }
+
+    //Read the receipt information
+    function receipt(address _testatorAddress, address _heirAddress) external view returns(bool) {
+        return isReceipted[_testatorAddress][_heirAddress];
+    }
 }
